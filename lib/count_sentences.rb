@@ -19,7 +19,7 @@ class String
     count = 0
     array = self.split
     array.each do |elem| 
-      count += 1  if elem.end_with?(".") || elem.end_with?("?") || elem.end_with?("!")
+      count += 1  if elem.sentence? || elem.question? || elem.exclamation?
     end
     count
   end
